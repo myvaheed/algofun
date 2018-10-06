@@ -58,7 +58,7 @@ public:
 	void push(T&& elem);
 
 	T pop();
-	T root();
+	T const& root() const;
 };
 
 

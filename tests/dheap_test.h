@@ -122,7 +122,8 @@ BOOST_AUTO_TEST_CASE(WithObject) {
 	A a2(-10);
 	heap.push(a2);
 	BOOST_REQUIRE(heap.root().getval() == -10);
-	heap.root().setval(10); //copy changed
+	A copied = heap.root();
+	copied.setval(10); //copy changed
 	BOOST_REQUIRE(heap.root().getval() == -10);
 
 	A fromHeap = heap.pop();

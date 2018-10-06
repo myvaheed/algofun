@@ -63,14 +63,13 @@ bool Stack<T>::operator==(Stack<T> const& obj) {
 	return !memcmp(stack, obj.stack, sizeof(T) * size);
 }
 
+
 template<class T>
-T const& Stack<T>::top() {
+T const& Stack<T>::top() const {
 	if (is_empty())
 		throw std::length_error("The Stack is empty");
 	return stack[size - 1];
 }
-
-#include <queue>
 
 template<class T>
 T Stack<T>::pop() {
@@ -107,7 +106,7 @@ void Stack<T>::pushImpl(UR&& elem) {
 }
 
 template<class T>
-bool Stack<T>::is_empty() {
+bool Stack<T>::is_empty() const {
 	return size == 0;
 }
 

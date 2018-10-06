@@ -85,7 +85,7 @@ public:
 		return *this;
 	}
 
-	int getval() {return val;}
+	int getval() const {return val;}
 	void setval(int val) {this->val = val;}
 };
 

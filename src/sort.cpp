@@ -136,5 +136,15 @@ std::vector<T> Sort<T>::_mergesort::merge(std::vector<T>& data, uint left, uint 
 	return std::move(sorted);
 }
 
+#include<dheap.h>
+template<class T>
+void Sort<T>::heap_sort(std::vector<T>& data) {
+	size_t size = data.size();
+	DHeap<T> heap(data);
+	data.clear();
+	for (size_t i = 0; i < size; i++) {
+		data.push_back(heap.pop());
+	}
+}
 
 

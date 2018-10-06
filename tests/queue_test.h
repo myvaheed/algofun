@@ -94,13 +94,10 @@ BOOST_AUTO_TEST_CASE(WithObject) {
 	A a2(4);
 	queue1.enqueue(a2);
 	BOOST_REQUIRE(queue1.back().getval() == 4);
-	queue1.back().setval(5);
-	BOOST_REQUIRE(queue1.back().getval() == 5);
+	A copied = queue1.back();
+	copied.setval(5);
+	BOOST_REQUIRE(queue1.back().getval() == 4);
 	BOOST_REQUIRE(a2.getval() == 4);
-
-	queue1.front().setval(6);
-	A changed_front = queue1.front();
-	BOOST_REQUIRE(changed_front.getval() == 6);
 }
 
 

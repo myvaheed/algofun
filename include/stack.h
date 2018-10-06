@@ -33,14 +33,14 @@ public:
 	Stack& operator=(Stack rs);
 	bool operator==(Stack const& rs);
 
-	bool is_empty();
+	bool is_empty() const;
 	size_t height();
 
 	void push(T const& elem);
 	void push(T&& elem);
 
 	T pop();
-	T const& top();
+	T const& top() const;
 };
 
 #endif /* HEADERS_STACK_H_ */

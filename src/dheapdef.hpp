@@ -212,7 +212,7 @@ size_t DHeap<T, D>::size() {
 }
 
 template<class T, uint D>
-T DHeap<T, D>::root() {
+T const& DHeap<T, D>::root() const {
 	return nodes[0].data;
 }
 

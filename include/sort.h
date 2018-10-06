@@ -15,16 +15,6 @@
 template<class T>
 struct Sort {
 
-	template<class T2>
-	static void print(T2 const& a, char end = '\n') {
-		if (typeid(T2).hash_code() == typeid(std::vector<T2>).hash_code()) {
-			std::vector<int>const& b = static_cast<std::vector<int>const&>(a);
-			for (auto el : b) {
-				std::cout << el << end;
-			}
-		}
-	}
-
 	static void swap(T& a, T& b) {
 		T temp = a;
 		a = b;
@@ -45,6 +35,7 @@ struct Sort {
 		static std::vector<T> merge(std::vector<T>& data, uint left, uint right);
 	};
 
+	static void heap_sort(std::vector<T>& data);
 };
 
 

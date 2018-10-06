@@ -12,6 +12,7 @@
 #include "stack_test.h"
 #include "queue_test.h"
 #include "dheap_test.h"
+#include "parser_test.h"
 
 
 

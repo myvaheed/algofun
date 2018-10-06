@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/expl_instance.cpp \
+../src/parser.cpp \
 ../src/sort.cpp 
 
 OBJS += \
 ./src/expl_instance.o \
+./src/parser.o \
 ./src/sort.o 
 
 CPP_DEPS += \
 ./src/expl_instance.d \
+./src/parser.d \
 ./src/sort.d 
 
 

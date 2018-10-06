@@ -58,14 +58,14 @@ bool Queue<T>::operator==(Queue<T> const& obj) {
 }
 
 template<class T>
-T const& Queue<T>::back() {
+T const& Queue<T>::back() const {
 	if (is_empty())
 		throw std::length_error("The Queue is empty");
 	return last->data;
 }
 
 template<class T>
-T const& Queue<T>::front() {
+T const& Queue<T>::front() const {
 	if (is_empty())
 		throw std::length_error("The Queue is empty");
 	return first->data;
@@ -112,12 +112,12 @@ void Queue<T>::enqueueImpl(UR&& elem) {
 }
 
 template<class T>
-size_t Queue<T>::length() {
+size_t Queue<T>::length() const {
 	return size;
 }
 
 template<class T>
-bool Queue<T>::is_empty() {
+bool Queue<T>::is_empty() const {
 	return size == 0;
 }
 

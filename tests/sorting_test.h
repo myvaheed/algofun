@@ -38,6 +38,12 @@ BOOST_AUTO_TEST_CASE(MergeSort) {
 	BOOST_REQUIRE(cdata == sorted);
 }
 
+BOOST_AUTO_TEST_CASE(HeapSort) {
+	std::vector<int> cdata = data;
+	Sort<int>::heap_sort(cdata);
+	BOOST_REQUIRE(cdata == sorted);
+}
+
 BOOST_AUTO_TEST_SUITE_END()
 
 

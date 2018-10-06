@@ -40,13 +40,13 @@ public:
 	Queue(Queue const& robj) = delete;
 	Queue& operator=(Queue const& rs) = delete;
 
-	bool is_empty();
-	size_t length();
+	bool is_empty() const;
+	size_t length() const;
 	void enqueue(T&& elem);
 	void enqueue(T const& elem);
 	T dequeue();
-	T const& back();
-	T const& front();
+	T const& back() const;
+	T const& front() const;
 };
 
 

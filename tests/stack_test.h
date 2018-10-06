@@ -93,14 +93,10 @@ BOOST_AUTO_TEST_CASE(WithObject) {
 	A a2(4);
 	stack1.push(a2);
 	BOOST_REQUIRE(stack1.top().getval() == 4);
-	stack1.top().setval(5);
-	BOOST_REQUIRE(stack1.top().getval() == 5);
+	A copied = stack1.top();
+	copied.setval(5);
+	BOOST_REQUIRE(stack1.top().getval() == 4);
 	BOOST_REQUIRE(a2.getval() == 4);
-
-	stack1.top().setval(6);
-	A changed_front = stack1.top();
-	BOOST_REQUIRE(changed_front.getval() == 6);
-
 }
 
 
